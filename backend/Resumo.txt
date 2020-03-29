@@ -1,0 +1,11 @@
+AS migrations servem como um histórico, no qual os desenvolvedores conseguem
+ver as alterações que foram sendo feitas.
+Ao executar o migrations pelo knex as tabelas já são criadas.
+npx knex migrate:make nameTable- Cria a tabela
+npx knex migrate:latest - Executa as migrations
+
+O arquivo fileController.js contém os métodos/lógicas relacionados as rotas.
+
+Em app.use(cors()) pode-se passar o endereço do site no qual a aplicação está hospedada
+por meio do seguinte parâmetro {origin: 'site'}.
+
