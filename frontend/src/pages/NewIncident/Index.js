@@ -1,19 +1,17 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom'; //Evita que carregue todo o react novamente e só troca a Rota
-import { FiArrowLeft } from 'react-icons/fi'
+import { Link } from 'react-router-dom'; //Evita que carregue todo o react novamente e só troca a Rota
+import { FiArrowLeft } from 'react-icons/fi';
 
-import api from '../../services/api'
+import api from '../../services/api';
 
 import './styles.css';
 
-import logoIMG from '../../assets/logo.svg'
+import logoIMG from '../../assets/logo.svg';
 
 export default function NewIncident() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
-    
-    const history = useHistory();
 
     const ongId = localStorage.getItem('ongId');
 
@@ -46,7 +44,7 @@ export default function NewIncident() {
                     <h1>Cadastrar novo caso</h1>
                     <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
                 
-                    <Link className=".back-link" to="/profile">
+                    <Link className="back-link" to="/profile">
                         <FiArrowLeft size={16} color="#E02041"/>
                         Voltar para home
                     </Link>

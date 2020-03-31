@@ -28,7 +28,7 @@ export default function Register(){
         };
 
         try{
-            const response = await api.post('ongs', data);
+            const response = await api.post('/ongs', data);
             
             alert(`Seu ID de acesso: ${response.data.id}`);
             
@@ -47,12 +47,12 @@ export default function Register(){
                     <h1>Cadastro</h1>
                     <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
                 
-                    <Link className=".back-link" to="/">
+                    <Link className="back-link" to="/">
                         <FiArrowLeft size={16} color="#E02041"/>
                         Não tenho cadastro
                     </Link>
                 </section>
-                <form anSubmit={handleRegister}>
+                <form onSubmit={handleRegister}>
                     <input 
                         placeholder="Nome da ONG" 
                         value={name}
@@ -63,27 +63,27 @@ export default function Register(){
                         type="email" 
                         placeholder ="E-mail"
                         value={email}
-                        onChange={e => setEmail(e.target.value)}/>
+                        onChange={e => setEmail(e.target.value)}
                     />
 
                     <input 
                         placeholder="WhatsApp"
                         value={whatsapp}
-                        onChange={e => setWhatsapp(e.target.value)}/>
+                        onChange={e => setWhatsapp(e.target.value)}
                     />
 
                     <div className="input-group">
                         <input 
                             placeholder="Cidade"
                             value={city}
-                            onChange={e => setCity(e.target.value)}/>
+                            onChange={e => setCity(e.target.value)}
                         />
 
                         <input 
                             placeholder="UF" 
                             style={{ width: 80}}
                             value={uf}
-                            onChange={e => setUf(e.target.value)}/>
+                            onChange={e => setUf(e.target.value)}
                         />
                     </div>
 

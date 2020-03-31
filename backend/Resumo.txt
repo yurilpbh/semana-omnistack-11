@@ -9,3 +9,4 @@ O arquivo fileController.js contém os métodos/lógicas relacionados as rotas.
 Em app.use(cors()) pode-se passar o endereço do site no qual a aplicação está hospedada
 por meio do seguinte parâmetro {origin: 'site'}.
 
+useEffect serve para disparar alguma função em algum determinado momento do componente

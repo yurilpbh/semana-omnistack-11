@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 
 //JSX (JavaScript XML (Sintaxe do HTML)) - Quando o HTML está integrado dentro do JS
 
@@ -7,6 +7,9 @@ import './global.css';
 import Routes from './routes'
 
 function App() {
+  return (
+    <Routes />
+    );
   /* //Um estado armazena informação sobre um componente e não pode ser mutado diretamente
   //useState retorna um Array [valor, funcaoDeAtualizacao]
   const [counter, setCounter] = useState(0);
@@ -14,10 +17,8 @@ function App() {
   function increment(){
     setCounter(counter + 1);
   }
- */
-  return (
-    <Routes />
-    /* <div>
+  return(
+  /* <div>
       //<Header title="Semana OmniStack"/> //Utiliza-se com props.title no Header
       /*<Header> 
         Semana OmniStack 
@@ -25,8 +26,9 @@ function App() {
       
       <Header>Contador: {counter}</Header>
       <button onClick={increment}>Incrementar</button>
-    </div> */
-    );
+    </div> 
+  );
+  */
 }
 
 export default App;

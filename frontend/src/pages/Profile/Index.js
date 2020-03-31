@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom'; //Evita que carregue todo o react novamente e só troca a Rota
-import { FiPower, FiTrash2 } from 'react-icons/fi'
+import { FiPower, FiTrash2 } from 'react-icons/fi';
 
 import api from '../../services/api';
 
 import './styles.css';
 
-import logoIMG from '../../assets/logo.svg'
+import logoIMG from '../../assets/logo.svg';
 
 export default function Profile(){
     const [incidents, setIncidents] = useState([]);
@@ -17,18 +17,18 @@ export default function Profile(){
     const history = useHistory();
 
     useEffect(() => {
-        api.get('profile', {
+        api.get('/profile', {
             headers: {
                 Authorization: ongId,
             }
         }).then(response => {
             setIncidents(response.data);
         })
-    }, {ongId});
-
+    }, [ongId]);
+    
     async function handleDeleteIncident(id){
         try{
-            await api.delete(`incidents/${id}`, {
+            await api.delete(`/incidents/${id}`, {
                 headers: {
                     Authorization: ongId,
                 }
@@ -52,7 +52,7 @@ export default function Profile(){
                 <img src={logoIMG} alt="Be The Hero"/>
                 <span>Bem vinda, {ongName}</span>
 
-                <Link className="button" to='/incidentes/new'>Cadastrar novo caso</Link>
+                <Link className="button" to='/incidents/new'>Cadastrar novo caso</Link>
                 <button onClick={handleLogout} type="button">
                     <FiPower size={18} color="#E02041" />
                 </button>
