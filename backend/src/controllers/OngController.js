@@ -1,4 +1,4 @@
-const crypto = require('crypto');
+const generateUniqueId = require('../utils/generateUniqueId');
 const connection = require('../database/connection'); //Conexão com o banco
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
         const {name, email, whatsapp, city, uf } = request.body;
     
         //O id é que será utilizado pela ONG para se conectar a aplicação e por isso será devolvido ao final da criação
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = generateUniqueId();
     
         await connection('ongs').insert({
             id,

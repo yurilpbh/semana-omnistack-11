@@ -10,3 +10,28 @@ Em app.use(cors()) pode-se passar o endereço do site no qual a aplicação est�
 por meio do seguinte parâmetro {origin: 'site'}.
 
 useEffect serve para disparar alguma função em algum determinado momento do componente
+
+TDD (Test-driven Development) Desenvolvimento dirigido a testes:
+    O teste nesse sentido funciona como um guia. Constrói-se o teste antes da aplicação.
+    Validam-se as regras de negócio antes do desenvolvimento da aplicação.
+
+Testes de integração, testam o fluxo de uma rota inteira da aplicação. Testa por completo
+uma funcionalidade.
+Teste unitário, testa um pedaço da aplicação de forma isolada.
+
+Ao se tratar de hospedagem para o backend (utilizando node) backend
+    Hospedar aplicações para teste e para demonstrar para os amigos, utilizar o heroku.com
+    Já para quando a aplicação começar a ficar maior a digital ocean é uma boa opção.
+
+Ao se tratar de hospedagem para o frontend (utilizando react)
+    Hospedar aplicações para teste e para demonstrar para os amigos, utilizar o netlify
+
+Ao se tratar do reactnative é preciso ver sobre publicação na loja (appStore)
+    Gerando apk expo - vídeo da rocktseat
+
+Estudar sobre 
+    Padrões de código ESLint, Prettier
+    Autenticação JWT
+    Styled Components (React e reactnative)
+
+Fazer um post no linkedin falando sobre o que foi aprendido durante a semana omnistack
